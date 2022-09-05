@@ -14,5 +14,5 @@
 
 - hosts: worker-group
   become: true
-  roles:
+  roles: 
   - swarmjoin

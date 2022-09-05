@@ -6,7 +6,8 @@
 
 - name: "get swarm info"
   docker_swarm_info:
-    nodes: yes
+  ignore_errors: yes
+    unlock_key: yes
   register: result
 
 

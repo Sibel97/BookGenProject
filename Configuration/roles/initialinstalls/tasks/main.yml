@@ -11,5 +11,6 @@
     - python3
     - python3-pip
     - git
+    - python-setuptools
     state: latest
     update_cache: true

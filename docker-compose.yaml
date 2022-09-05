@@ -19,7 +19,7 @@ services:
     container_name: Front-end
     image: sibel97/Front-end:latest
     build: ./Front-end
-    depends_on:
+    depends_on: 
       - author-api
       - genre-api
       - book-api

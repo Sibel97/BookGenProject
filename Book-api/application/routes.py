@@ -2,7 +2,7 @@ from application import app
 from flask import Flask, request, Response
 
 @app.route('/get_book', methods = ['POST'])
-def effect():
+def getbook():
     books = {"Lady of the shades": ("Romance", "Darren Shan"), "One Summer" : ("Romance", "David Baldacci"), "Two from the heart": ("Romance","James Patterson"), "The dead zone": ("Romance","Stephen King"), \
         "Lord Loss":("Horror", "Darren Shan"), "IT": ("Horror", "Stephen King"), "Cradle and all": ("Horror","James Patterson"), "Deliver us from evil": ("Horror", "David Baldacci") \
             ,"Possession of the dead": ("Crime", "Darren Shan"), "Mr Mercedes": ("Crime","Stephen King"), "Along came a spider": ("Crime", "James Patterson"), "Walk the wire": ("Crime", "David Baldacci"), \
@@ -10,6 +10,6 @@ def effect():
     BookChoice = request.get_json()
     Genre = BookChoice["Genre"]
     Author = BookChoice["Author"]
-    book = list(books.keys())[list(books.values()).index((Genre,Author))]
-    effect = f"{book} By {Author} - Genre: {Genre}"
-    return Response(effect, mimetype='text/plain')
+    result = (list(books.keys())[list(books.values()).index((Genre,Author))])
+    
+    return Response(result, mimetype='text/plain')

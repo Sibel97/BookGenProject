@@ -7,3 +7,11 @@
 - name: "get swarm info"
   docker_swarm_info:
   register: swarm_info
+
+
+- name: "Deploy app"
+  docker_stack:
+    state: present
+    name: book_generator
+    compose:
+      - /home/jenkins/docker-compose.yaml

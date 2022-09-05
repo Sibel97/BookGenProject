@@ -7,7 +7,7 @@
 - name: "get swarm info"
   docker_swarm_info:
     nodes: yes
-  register: swarm_info
+  register: result
 
 
 - name: "Deploy app"

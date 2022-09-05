@@ -1,8 +1,5 @@
 ---
 # tasks file for swarmjoin
-- name: "Print Hostvars"
-  debug:
-    var: hostvars['manager']
 
 - name: "Add node to swarm"
   docker_swarm:

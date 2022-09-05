@@ -1,7 +1,7 @@
 ---
 # tasks file for pipInstalls
 - name: "pip install"
-  pip:
+  pip3:
     name:
     - flask
     - pytest

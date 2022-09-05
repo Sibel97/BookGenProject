@@ -1,6 +1,9 @@
 ---
 # tasks file for swarminit
-- name: "Init a new swarm with default parameters"
+- name: "Init swarm"
   docker_swarm:
     state: present
+
+- name: "get swarm info"
+  docker_swarm_info:
   register: swarm_info

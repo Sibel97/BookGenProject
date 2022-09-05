@@ -10,7 +10,7 @@
 - hosts: manager-group
   connection: local
   become: true
-  roles:
+  roles: 
   - swarminit
 
 - hosts: worker-group

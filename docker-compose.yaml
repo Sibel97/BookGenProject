@@ -14,13 +14,13 @@ services:
     networks:
       - book-net
     depends_on:
-      - Front-end
+      - front-end
   mysql:
     container_name: mysql
     image: sibel97/bookDB:latest
     build: ./BookDB
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: BookDB
     volumes:
       - type: volume
@@ -33,7 +33,7 @@ services:
     image: sibel97/Front-end:latest
     build: ./Front-end
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: root
     networks:
       - book-net
     depends_on:

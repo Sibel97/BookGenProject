@@ -6,7 +6,6 @@
 
 - name: "get swarm info"
   docker_swarm_info:
-  hostvars: 
     register: swarm_info
 
 

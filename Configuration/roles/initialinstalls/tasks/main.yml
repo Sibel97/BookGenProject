@@ -9,7 +9,6 @@
   apt:
     name:
     - python3
-    - python-pip
     - python3-pip
     - git
     state: latest

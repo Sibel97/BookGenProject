@@ -15,5 +15,5 @@
     state: present
     name: book_generator
     compose:
-      - /home/jenkins/BookGenProject/docker-compose.yaml
+      - /home/jenkins/docker-compose.yaml
       

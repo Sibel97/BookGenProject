@@ -1,0 +1,16 @@
+---
+# tasks file for initialinstalls
+- name: "update apt packages"
+  apt:
+    upgrade: yes
+    update_cache: yes
+
+- name: "install git and python3 and python pip"
+  apt:
+    name:
+    - python3
+    - python-pip
+    - python3-pip
+    - git
+    state: latest
+    update_cache: true

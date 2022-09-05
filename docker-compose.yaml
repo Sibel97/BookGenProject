@@ -1,0 +1,68 @@
+version: "3.8"
+services:
+  nginx:
+    container_name: nginx
+    image: nginx:alpine
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    networks:
+      - book-net
+    depends_on:
+      - Front-end
+  mysql:
+    container_name: mysql
+    image: sibel97/bookDB:latest
+    build: ./BookDB
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: BookDB
+    volumes:
+      - type: volume
+        source: books-vol
+        target: /var/lib/mysql
+    networks:
+      - book-net
+  front-end:
+    container_name: Front-end
+    image: sibel97/Front-end:latest
+    build: ./Front-end
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    networks:
+      - book-net
+    depends_on:
+      - mysql
+      - author-api
+      - genre-api
+      - book-api
+  author-api:
+    image: sibel97/author-api:latest
+    build: ./Author-api
+    deploy:
+      replicas: 3
+    networks:
+      - book-net
+  genre-api:
+    image: sibel97/genre-api:latest
+    build: ./Genre-api
+    deploy:
+      replicas: 3
+    networks:
+      - book-net
+  book-api:
+    image: sibel97/book-api:latest
+    build: ./Book-api
+    deploy:
+      replicas: 3
+    networks:
+      - book-net
+volumes:
+  books-vol:
+networks:
+  book-net:

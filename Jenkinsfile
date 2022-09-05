@@ -4,9 +4,9 @@ pipeline {
 
         stage('Build and push images') {
             steps {
-                sh "docker-compose build --parallel"
-                sh "docker login -u sibel97 -p password1234"
-                sh "docker-compose push"
+                sh "sudo docker-compose build --parallel"
+                sh "sudo docker login -u sibel97 -p password1234"
+                sh "sudo docker-compose push"
             }
         }
         stage('Deploy') {

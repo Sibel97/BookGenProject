@@ -3,7 +3,7 @@
   roles:
   - initialinstalls
   - pipInstalls
-  - dockerinstall 
+  - dockerinstall
 
 
 - hosts: manager-group

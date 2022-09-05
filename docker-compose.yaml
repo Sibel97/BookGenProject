@@ -17,7 +17,7 @@ services:
       - front-end
   front-end:
     container_name: Front-end
-    image: sibel97/Front-end:latest
+    image: sibel97/front-end:latest
     build: ./Front-end
     depends_on: 
       - author-api

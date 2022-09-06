@@ -2,6 +2,11 @@ pipeline {
     agent any
     stages {
 
+        stage('Run unit tests') {
+            steps {
+                sh "bash test.sh"
+            }
+        }
         stage('Build and push images') {
             steps {
                 sh "sudo docker-compose build --parallel"

@@ -9,9 +9,6 @@ import requests
 def home():
     return render_template("Home.html")
 
-
-
-
 @app.route('/Generate', methods = ['GET'])
 def Generate():
     Genre = requests.get('http://Genre-api:5001/get_Genre').text

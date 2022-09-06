@@ -28,7 +28,7 @@ pipeline {
             cobertura coberturaReportFile: 'Front-end/coverage.xml', failNoReports: false
             cobertura coberturaReportFile: 'Genre-api/coverage.xml', failNoReports: false
             cobertura coberturaReportFile: 'Author-api/coverage.xml', failNoReports: false
-            cobertura coberturaReportFile: 'Book-api/coverage.xml', failNoReports: false 
+            cobertura coberturaReportFile: 'Book-api/coverage.xml', failNoReports: false
         }
     }
 

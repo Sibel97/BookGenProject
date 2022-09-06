@@ -9,6 +9,6 @@ do
   source venv/bin/activate
   pip3 install -r requirements.txt
   python3 -m pytest --cov=application --cov-report=xml --junitxml=junit/test-results.xml
-  deactivate
+  source venv/bin/deactivate
   cd ..
 done

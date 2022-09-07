@@ -16,5 +16,4 @@
     name: book_generator
     compose:
       - /home/jenkins/docker-compose.yaml
-    detach: yes
       

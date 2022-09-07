@@ -1,7 +1,6 @@
 version: "3.8"
 services:
   nginx:
-    container_name: nginx
     image: nginx:alpine
     ports:
       - target: 80
@@ -16,9 +15,10 @@ services:
     depends_on:
       - front-end
   front-end:
-    container_name: Front-end
     image: sibel97/front-end:latest
     build: ./Front-end
+    networks:
+      - book-net
     depends_on: 
       - author-api
       - genre-api

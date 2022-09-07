@@ -1,0 +1,19 @@
+---
+# tasks file for swarminit
+- name: "Init swarm"
+  docker_swarm:
+    state: present
+
+- name: "get swarm info"
+  docker_swarm_info:
+  ignore_errors: yes
+  register: result
+
+
+- name: "Deploy app"
+  docker_stack:
+    state: present
+    name: book_generator
+    compose:
+      - /home/jenkins/docker-compose.yaml
+      

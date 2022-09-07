@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+    networks:
+      - book-net
+    depends_on:
+      - front-end
+  front-end:
+    image: sibel97/front-end:latest
+    build: ./Front-end
+    networks:
+      - book-net
+    depends_on: 
+      - author-api
+      - genre-api
+      - book-api
+  author-api:
+    image: sibel97/author-api:latest
+    build: ./Author-api
+    deploy:
+      replicas: 3
+    networks:
+      - book-net
+  genre-api:
+    image: sibel97/genre-api:latest
+    build: ./Genre-api
+    deploy:
+      replicas: 3
+    networks:
+      - book-net
+  book-api:
+    image: sibel97/book-api:latest
+    build: ./Book-api
+    deploy:
+      replicas: 3
+    networks:
+      - book-net
+networks:
+  book-net:

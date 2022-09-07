@@ -1,0 +1,19 @@
+- hosts: all
+  become: true
+  roles:
+  - copykey
+  - initialinstalls
+  - pipInstalls
+  - dockerinstall
+
+
+- hosts: manager-group
+  connection: local
+  become: true
+  roles: 
+  - swarminit
+
+- hosts: worker-group
+  become: true
+  roles: 
+  - swarmjoin

@@ -1,0 +1,12 @@
+Flask
+SQLAlchemy
+pymysql
+requests
+pytest
+pytest-cov
+requests_mock
+markupsafe
+itsdangerous
+Jinja2
+flask-SQLAlchemy
+flask-testing

@@ -19,7 +19,13 @@ The requirements of the project are as follows:
 
 For the purpose of this project the minimum viable product was planned and created.
 
-## Jira :Planning 
+## Appplication : Design 
+
+For this project I created an application that generates a book when requested user, by choosing a random genre, then a random author and finally returning a book that matches both. This was created using a service-oriented architecture, a front end service sending html requests to API's to recieve its end result.
+
+(INSERT PICTURE OF APP)
+
+## Jira : Planning 
 For this project Jira was used to manage the workflow, creating a backlog of tasks that needed to be created, as well as user stories. For each of these tasks, a priorty was set based on its importance to the project, and a story point was assigned based on how difficult of a task it would be to implement. This again allowed me a better understanding of what needed to be done and the best way to divide the project into sprints. 
 (INSERT PICTURE OF BACKLOG)
 
@@ -37,3 +43,46 @@ Using Jira and the built-in attributes you can allocated to tasks and sprints al
 (INSERT RISK ASSESSMENT PICTURE)
 
 This risk assessment details some of the possible risks that may have been encountered when completeing these products, mainly the issues that were possible would be down to poor planning or design on my end, or mainly issues with GCP, Jenkins, Ansible and docker as these are the biggest contributing factors to the project, the python is key but simple in comparrison. The risk assessment breaks down what may happen, the outcome, who is responsible, how detrimental the error would be if occured, probablity, response and preventative measures. Identifying these issues before they occur allows for better control of issues when and if they arise duing the project timeframe. 
+
+## Version Control System : Feature-Branch Model 
+
+## Virtual Machines : GCP
+
+## The Application : Service-oriented Architecture 
+
+## Ansible : The Environment 
+
+### Roles 
+### Playbook
+### Inventory 
+
+## Docker : Containerisation
+
+### Dockerfiles 
+### Building images
+### Docker-compose
+#### Docker swarm stack : Orchestration Tool
+
+## NGINX : Reverse Proxy
+
+## Testing : Mock Testing/ Unit Tests
+
+## CI Server : Jenkins 
+
+### Pipeline
+
+#### Run Tests
+#### Build and push images 
+#### Deploy app
+#### Print testing reports 
+
+## Continuous Integration : Webhooks
+
+## Issues Encountered 
+
+## What could be Improved 
+
+
+
+
+

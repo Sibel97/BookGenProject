@@ -23,7 +23,7 @@ For the purpose of this project the minimum viable product was planned and creat
 
 For this project I created an application that generates a book when requested user, by choosing a random genre, then a random author and finally returning a book that matches both. This was created using a service-oriented architecture, a front end service sending html requests to API's to recieve its end result.
 
-(INSERT PICTURE OF APP)
+(https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Book-Gen.png)
 
 ## Jira : Planning 
 For this project Jira was used to manage the workflow, creating a backlog of tasks that needed to be created, as well as user stories. For each of these tasks, a priorty was set based on its importance to the project, and a story point was assigned based on how difficult of a task it would be to implement. This again allowed me a better understanding of what needed to be done and the best way to divide the project into sprints. 

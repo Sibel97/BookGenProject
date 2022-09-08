@@ -31,7 +31,7 @@ services:
     image: sibel97/author-api:latest
     build: ./Author-api
     ports:
-    - target: 5000
+    - target: 5002
       published: 5002
       protocol: tcp
     deploy:
@@ -53,7 +53,7 @@ services:
     image: sibel97/book-api:latest
     build: ./Book-api
     ports:
-    - target: 5000
+    - target: 5003
       published: 5003
       protocol: tcp
     deploy:

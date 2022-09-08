@@ -61,7 +61,7 @@ In order for the virtual machines to run the applications needed, I needed to cr
 ![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/GCP%20tags.png)
 
 ## The Application : Service-oriented Architecture 
-
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/services%20dia.png) \
 Having a service-oriented architecture for the application was a key part in this project, the brief declared a front end was required, two random services and a logic service that returned the desired result. To achieve this the application was planned as follows: \
 **Service 1 : Front End** This is what the user will see - it will make the requests to the other service apis and then print the result to the user. \
 ![image](https://user-images.githubusercontent.com/45011190/189123211-a7b0ff86-d2c6-49d1-81a6-4b9d4da149bc.png) \
@@ -123,7 +123,7 @@ Mock testing is a way to generate a fake output of a function that needs to be t
 
 
 ## CI Server : Jenkins 
-
+For this project, jenkins was used to automate a variety of tasks for my projecy, such as unit testing, building the docker images and pushing them, deploying the app and creating test reports. Being used in tandem with a webhook to a git repo means jenkins allows for continuous integration and continous deployment. 
 ### Pipeline
 ![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Pipeline%20stages%20view.png) \
 #### Run Tests

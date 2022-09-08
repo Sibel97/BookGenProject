@@ -35,18 +35,18 @@ services:
       published: 5002
       protocol: tcp
     deploy:
-      replicas: 0
+      replicas: 1
     networks:
       - book-net
-  Genre-api:
+  genre-api:
     image: sibel97/genre-api:latest
     build: ./Genre-api
     ports:
-    - target: 5000
+    - target: 5001
       published: 5001
       protocol: tcp
     deploy:
-      replicas: 0
+      replicas: 1
     networks:
       - book-net
   book-api:
@@ -57,7 +57,7 @@ services:
       published: 5003
       protocol: tcp
     deploy:
-      replicas: 0
+      replicas: 1
     networks:
       - book-net
 networks:

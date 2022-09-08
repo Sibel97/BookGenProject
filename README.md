@@ -70,17 +70,30 @@ Having a service-oriented architecture for the application was a key part in thi
 ![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/s4%20logic.png) 
 
 ## Ansible : The Environment 
-
+Ansible is an automation tool, that for this project was used to develop the environment that the virtual machines would be using. To do this, a folder called configuration was created that was home to all of the ansible side of the project. The benefit of using ansible is that it automatically allows the environment to be built for the virtual machines to make sure they have all the requirements and tasks defined. 
 ### Roles 
+Ansible roles allowed me to automate tasks that needed to be done to develop the environment on the virtual machines that would be used. The following roles were created. \
+**DockerInstall** This task when called in the playbook, would download docker onto all the hosts specified. This not only ensures that all hosts have docker installed, but they have the same version. \
+**initialinstalls** This role was created to update apt packages and install the necessary packages for this project to run on the vms, these packages included * *Python3, python3-pip, git and python-setuptools* * to their latest versions. \
+**Pipinstalls** Similar to the previous role, this was created to install the pip dependencies for the project, these being * *Flask and Pytest* - These are the initial pip installs requires and the others were covered by the requirement.txt files within each service folder. \
+**Swarminit** This role initialised the swarm, gathers the swarm info and then deploys the app. This role is primarily for the swarm manager. It provisions the manager node ready for any number of worker nodes to join the project needs scaling. For this project only one worker node will be joining the swarm. \
+**Swarmjoin** This role is primarily for the worker nodes and it joins the worker to the swarm initalised by the manager node.\
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Ansible%20roles.png)
+
 ### Playbook
+The playbook is where you allocate the tasks to the host groups defined in the inventory. As you can see in my playbook, there are tasks that all hosts need to do, which are in the installs to provision the environment. Further down is the unique task swarminit assigned to the manager host and the swarm join allocated to the worker group hosts. The become true option allows the tasks to be carried out as a root/sudo command. 
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Playbook%20yaml.png)
+
 ### Inventory 
+The inventory file defines the hosts and the host groups that will be used when running the ansible tasks defined above. For this project we have the worker-group and the manager-group. For the mvp, only one worker node was provisioned so only one host exists under each host group. Once the hosts are defined, we can then set the variables, the host name is jenkins, the path to the shh key so they can connect, turning off strict host key checking to prevent errors and a path to the python interpreter. 
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Inventory%20yaml.png)
 
 ## Docker : Containerisation
 
 ### Dockerfiles 
 ### Building images
 ### Docker-compose
-#### Docker swarm stack : Orchestration Tool
+### Docker swarm stack : Orchestration Tool
 
 ## NGINX : Reverse Proxy
 

@@ -47,9 +47,22 @@ This risk assessment details some of the possible risks that may have been encou
 
 ## Version Control System : Feature-Branch Model 
 
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/branches%20for%202ns.png)
+
+For this project github was used as the version control system within this project which allowed me to keep track of changes made to my repository. For this project the feature-branch model was utilised, meaning that for any big feature of the project a new branch was created to work off of. This means that the two main branches Main and Dev, are unaffected by any new changes to the code until it is time to include it into this project. This ensures that if an issue occurs when the features are integrated, the main branches are unaffected by this change and are still functional. For this project I had a branch for each service, a configuration branch, testing branch and a branch where improvements were made or errors were fixed. This allowed me to keep a working product whilst constantly being able to update and improve the project on another branch. 
+
 ## Virtual Machines : GCP
 
+One of the requirements of this project was for the app to be deployed to a cloud based virtual machine and for this project I used google cloud platform. Here I creamed the virtual instances that I connected to VSCode, a Jenkins server, a swarm manager(node-m) and a swarm worker (instance-1). It was on these virtual machines that I was able to work on a remote host and build the application as well as deploy it. 
+
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/gcp%20vms.png)
+
 ## The Application : Service-oriented Architecture 
+
+Having a service-oriented architecture for the application was a key part in this project, the brief declared a front end was required, two random services and a logic service that returned the desired result. To achieve this the application was planned as follows:
+**Service 1 : Front End** This is what the user will see - it will make the requests to the other service apis and then print the result to the user. 
+**Service 2 : Genre-api** This is the server that randomly selects a genre from an array using random.choice and sends it back to the **front-end**
+**Service 3 : Author-api** 
 
 ## Ansible : The Environment 
 

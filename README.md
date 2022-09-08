@@ -61,8 +61,13 @@ One of the requirements of this project was for the app to be deployed to a clou
 
 Having a service-oriented architecture for the application was a key part in this project, the brief declared a front end was required, two random services and a logic service that returned the desired result. To achieve this the application was planned as follows: \
 **Service 1 : Front End** This is what the user will see - it will make the requests to the other service apis and then print the result to the user. \
+![image](https://user-images.githubusercontent.com/45011190/189123211-a7b0ff86-d2c6-49d1-81a6-4b9d4da149bc.png) \
 **Service 2 : Genre-api** This is the server that randomly selects a genre from an array using random.choice and sends it back to the **front-end**\
-**Service 3 : Author-api** 
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/s2%20random.png) \
+**Service 3 : Author-api** This is the server that randomly selects an author from an array using random.choice and sends it back the the **front-end**\
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/s3%20random.png) \
+**Service 4 : Book-api** This is the logic server, which takes the randomly selected genre and author from **service 1** and **service 2** and returns a book that matches the two. In order to do this a dictionary was created, the key being the book title and the values being a tuple of (genre,author) passed from the variables in the front end. It then returns the book that matches the correct genre and author and sends it back the the **front-end**. \
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/s4%20logic.png) 
 
 ## Ansible : The Environment 
 

@@ -27,20 +27,21 @@ For this project I created an application that generates a book when requested u
 
 ## Jira : Planning 
 For this project Jira was used to manage the workflow, creating a backlog of tasks that needed to be created, as well as user stories. For each of these tasks, a priorty was set based on its importance to the project, and a story point was assigned based on how difficult of a task it would be to implement. This again allowed me a better understanding of what needed to be done and the best way to divide the project into sprints. 
-(INSERT PICTURE OF BACKLOG)
+
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Jira%20backlog%2C%20sprints.png)
 
 Once the sprints were created with their allocated tasks, it was moved onto a kanban board where I could keep track of the tasks that were in progress, which were completed and which were yet to be started. Again this just allowed for further planning and tracking of the development of the project. 
 
-(INSERT PICTURE OF BOARD)
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/Sprint%20example.png)
 
 Using Jira and the built-in attributes you can allocated to tasks and sprints allowed me to keep track of the number of story points in total the project had and compare this to the days I had to complete the assignment. This allowed me to created an expected burndown of my story points in relation to time, keeping track of my progress I was then able to include my actual burndown progress. Overall, there were quite a few deviations to the expected burndown, either because of issues faces prolonging the task or some running smoother than expected but overall the project was completed on time. 
 
-(INSERT PICTURE OF BURNDOWN CHART)
+![](https://raw.githubusercontent.com/Sibel97/BookGenProject/main/Read-me%20images/burndown.jpg)
 
 
 ## Risk Assessment : Planning 
 
-(INSERT RISK ASSESSMENT PICTURE)
+![](![image](https://user-images.githubusercontent.com/45011190/189105781-2782050d-88ba-40c8-8772-4d68c3579c4d.png)
 
 This risk assessment details some of the possible risks that may have been encountered when completeing these products, mainly the issues that were possible would be down to poor planning or design on my end, or mainly issues with GCP, Jenkins, Ansible and docker as these are the biggest contributing factors to the project, the python is key but simple in comparrison. The risk assessment breaks down what may happen, the outcome, who is responsible, how detrimental the error would be if occured, probablity, response and preventative measures. Identifying these issues before they occur allows for better control of issues when and if they arise duing the project timeframe. 
 

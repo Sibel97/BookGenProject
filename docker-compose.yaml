@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   nginx:
-    image: nginx:alpine
+    image: nginx:latest
     ports:
       - target: 80
         published: 80
@@ -17,6 +17,10 @@ services:
   front-end:
     image: sibel97/front-end:latest
     build: ./Front-end
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
     networks:
       - book-net
     depends_on: 
@@ -26,22 +30,34 @@ services:
   author-api:
     image: sibel97/author-api:latest
     build: ./Author-api
+    ports:
+    - target: 5002
+      published: 5002
+      protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 1
     networks:
       - book-net
   genre-api:
     image: sibel97/genre-api:latest
     build: ./Genre-api
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 1
     networks:
       - book-net
   book-api:
     image: sibel97/book-api:latest
     build: ./Book-api
+    ports:
+    - target: 5003
+      published: 5003
+      protocol: tcp
     deploy:
-      replicas: 3
+      replicas: 1
     networks:
       - book-net
 networks:
